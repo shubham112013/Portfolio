@@ -10,7 +10,7 @@ import {
 
 import reviewvault from "./assets/ReviewVault.png";
 import dinedivide from "./assets/DineDivide.png";
-import faraway from "./assets/Faraway.png";
+import faraway from "./assets/FarAway.png";
 import smartsum from "./assets/SmartSum.png";
 
 export const links = [
