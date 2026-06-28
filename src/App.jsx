@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import {
   FiArrowUp,
   FiBriefcase,
@@ -104,8 +105,43 @@ const stack = [
   'AWS Bedrock',
 ];
 
+const navItems = [
+  ['expertise', 'Expertise'],
+  ['ai', 'AI'],
+  ['work', 'Work'],
+  ['experience', 'Experience'],
+  ['contact', 'Contact'],
+];
+
 const App = () => {
+  const [activeSection, setActiveSection] = useState('');
   const year = new Date().getFullYear();
+
+  useEffect(() => {
+    const sections = navItems
+      .map(([id]) => document.getElementById(id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target.id) {
+          setActiveSection(visibleEntry.target.id);
+        }
+      },
+      {
+        rootMargin: '-30% 0px -45% 0px',
+        threshold: [0.15, 0.35, 0.55],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -121,11 +157,16 @@ const App = () => {
           </span>
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
-          <a href="#expertise">Expertise</a>
-          <a href="#ai">AI</a>
-          <a href="#work">Work</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
+          {navItems.map(([id, label]) => (
+            <a
+              className={activeSection === id ? 'active' : undefined}
+              href={`#${id}`}
+              key={id}
+              aria-current={activeSection === id ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          ))}
         </nav>
         <a className="icon-button" href="mailto:shubham.mishra0796@gmail.com" aria-label="Email Shubham" title="Email Shubham">
           <FiMail />
@@ -157,14 +198,6 @@ const App = () => {
             </div>
             <div className="hero-visual" aria-hidden="true">
               <img src="/assets/servicenow-ai-hero-v2.png" alt="" />
-              <div className="floating-panel panel-top">
-                <FiZap />
-                <span>Now Assist</span>
-              </div>
-              <div className="floating-panel panel-bottom">
-                <FiCheckCircle />
-                <span>Workflow ready</span>
-              </div>
             </div>
           </div>
         </section>
