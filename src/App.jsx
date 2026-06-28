@@ -106,6 +106,7 @@ const stack = [
 ];
 
 const navItems = [
+  ['top', 'Home'],
   ['expertise', 'Expertise'],
   ['ai', 'AI'],
   ['work', 'Work'],
