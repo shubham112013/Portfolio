@@ -67,6 +67,7 @@ const timeline = [
   ['Jan 2026 - Present', 'ServiceNow Developer, HYR Global Source Inc', 'Demand intake, SPO governance, approval architecture, executive notifications, financial tracking, and SOX audit workflow automation.'],
   ['Feb 2025 - Jan 2026', 'ServiceNow Developer, RSC Solutions', 'REST integrations, custom UI Builder workspace, Walk-up Experience, Outlook Actionable Messages, instance clones, and Yokohama upgrade support.'],
   ['Nov 2024 - Feb 2025', 'Senior Software Engineer, Work4Flow', 'Agent AI skills, prompt tooling, Kafka-to-ServiceNow inventory mapping, GenAI Virtual Agent topics, knowledge automation, CMDB, Discovery, and Service Mapping.'],
+  ['Sep 2024 - Nov 2024', 'Software Developer, Games for Love Organization', 'Contributed to educational game projects for a nonprofit organization by improving game algorithms, user interfaces, and feature functionality.'],
   ['Jul 2023 - Sep 2024', 'ServiceNow Developer, NYC Department of Sanitation', 'ITSM automation, ITAM Service Catalog, Service Portal, UI Macros, UI Pages, MID Server exports, CMDB record integrity, and Performance Analytics.'],
   ['Jun 2020 - Jul 2022', 'Software Developer, Futuretech Bizsoft LLP', 'Service Catalogs, Knowledge workflows, 30+ REST integrations, ITSM modules, CSM portals, Agile delivery, scheduled jobs, and approval notifications.'],
 ];
@@ -297,7 +298,7 @@ const App = () => {
         <section id="experience" className="section timeline-section">
           <div className="section-heading">
             <p className="eyebrow">Experience</p>
-            <h2>ServiceNow-focused engineering across enterprise and consulting environments.</h2>
+            <h2>Engineering experience across ServiceNow, AI workflow products, and mission-driven software.</h2>
           </div>
           <div className="timeline">
             {timeline.map(([date, title, body]) => (
@@ -347,11 +348,11 @@ const App = () => {
           <div className="contact-actions">
             <a className="primary-action" href="mailto:shubham.mishra0796@gmail.com">
               <FiSend />
-              shubham.mishra0796@gmail.com
+              Email me
             </a>
             <a className="secondary-action" href="tel:+15513446156">
               <FiPhone />
-              551 344 6156
+              Call me
             </a>
           </div>
         </section>
