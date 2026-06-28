@@ -1,31 +1,38 @@
 import {
   FiArrowUp,
-  FiBarChart2,
   FiBriefcase,
+  FiCheckCircle,
   FiCpu,
-  FiDownload,
-  FiFileText,
   FiGrid,
+  FiLayers,
   FiMail,
   FiPhone,
   FiSend,
+  FiShield,
   FiZap,
 } from 'react-icons/fi';
 
 const metrics = [
-  ['2,000+', 'annual user updates automated through a Zoom REST API integration'],
+  ['2,000+', 'annual user updates achieved through automation'],
   ['98%', 'processing time reduction for IT asset request fulfillment'],
   ['30+', 'ServiceNow REST integrations configured and maintained'],
-  ['99.5%', 'SLA compliance supported across high-volume ITSM operations'],
+  ['99.5%', 'SLA compliance supported across high-volume operations'],
 ];
 
 const expertise = [
-  ['Workflow Automation', 'Flow Designer, approvals, playbooks, custom intake, email notifications, audit tracking, and fulfillment orchestration.', FiZap],
-  ['ITSM & Platform Engineering', 'Incident, Problem, Change, Service Catalog, Business Rules, Client Scripts, UI Policies, ACLs, and ATF coverage.', FiGrid],
-  ['Experience & Workspaces', 'UI Builder workspaces, Service Portal, Employee Center journeys, Walk-up Experience, widgets, and custom views.', FiBriefcase],
-  ['Integrations & Data', 'Integration Hub, REST APIs, MID Server exports, Kafka-fed inventory mapping, MSSQL, CMDB, Discovery, and Service Mapping.', FiCpu],
-  ['Now Assist & AI', 'Virtual Agent topics, GenAI integrations, prompt tooling, AI skills, knowledge automation, and multi-turn assistant flows.', FiSend],
-  ['Analytics & Governance', 'Performance Analytics dashboards, SOX audit intake, procurement governance, financial tracking, and executive notifications.', FiBarChart2],
+  ['ITSM Delivery', 'Incident, Problem, Change, Service Catalog, SLAs, notifications, approvals, Flow Designer, ATF, ACLs, and platform governance.', FiGrid],
+  ['ITAM & CMDB', 'Asset request fulfillment, catalog automation, inventory quality, Discovery support, Service Mapping, exports, and data integrity.', FiLayers],
+  ['ITOM & Integrations', 'Integration Hub, REST APIs, MID Server patterns, Kafka-fed inventory mapping, MSSQL exports, and event-driven automation.', FiCpu],
+  ['SPO / Source-to-Pay', 'Procurement intake, sourcing workflows, approval sequences, executive notifications, financial tracking, and audit-ready controls.', FiShield],
+  ['Employee Center & Workspaces', 'Employee Center portal design, Service Portal, UI Builder workspaces, Walk-up Experience, widgets, and workspace configuration.', FiBriefcase],
+  ['HRSD, CSM & AI', 'Now Assist, Virtual Agent, custom topics, NLU/NLM design, GenAI API integrations, knowledge automation, and assisted support flows.', FiZap],
+];
+
+const aiHighlights = [
+  'Built Virtual Agent experiences using custom topics and NLU/NLM configuration for guided self-service.',
+  'Integrated external GenAI services, including Google Gemini-style API patterns, into support and automation workflows.',
+  'Worked with Now Assist for Creator, ITSM, CSM, and HRSD to improve developer velocity and user-facing service experiences.',
+  'Created prompt evaluation and AI skill concepts for workflow products, knowledge automation, and assistant quality improvement.',
 ];
 
 const caseStudies = [
@@ -33,26 +40,32 @@ const caseStudies = [
     company: 'HYR Global Source',
     title: 'Demand, procurement, and SOX workflow modernization',
     body: 'Enhanced Demand intake with custom forms, approval routing, financial tracking, and executive notifications while automating SOX audit intake across Network and Security partners.',
-    points: ['Custom forms and approval sequences', 'Sourcing and Procurement playbooks', 'Governance-ready audit tracking'],
+    points: ['Custom forms and approval sequences', 'SPO and procurement playbooks', 'Governance-ready audit tracking'],
   },
   {
     company: 'RSC Solutions',
-    title: 'Zoom user update automation with REST and Flow Designer',
-    body: "Built a custom Flow Designer HTTP action to connect ServiceNow with Zoom's REST API, removing manual updates and reducing update time from hours to under 30 seconds.",
-    points: ['2,000+ annual updates automated', '100% manual effort eliminated', 'Reusable integration pattern'],
+    title: 'Enterprise user update automation',
+    body: 'Built reusable ServiceNow automation patterns that removed manual update cycles and reduced work that previously took hours to under 30 seconds.',
+    points: ['2,000+ annual user updates automated', 'Manual effort reduced at scale', 'Reusable integration approach'],
+  },
+  {
+    company: 'Work4Flow',
+    title: 'AI-assisted ServiceNow workflows',
+    body: 'Delivered AI skills, prompt tooling, Virtual Agent flows, knowledge automation, and ServiceNow data automation for modern support and operations teams.',
+    points: ['Now Assist and GenAI workflow concepts', 'Virtual Agent custom topics', '75% faster data processing pattern'],
   },
   {
     company: 'NYC Department of Sanitation',
-    title: 'ITSM, ITAM, Service Portal, and analytics delivery',
+    title: 'ITSM, ITAM, portal, and analytics delivery',
     body: 'Delivered incident automation, IT asset catalog flows, portal experiences, MID Server exports, and Performance Analytics dashboards for inventory and budgeting visibility.',
     points: ['35% faster incident response', '98% faster IT asset request processing', '40% improvement in user engagement'],
   },
 ];
 
 const timeline = [
-  ['Jan 2026 - Present', 'ServiceNow Developer, HYR Global Source Inc', 'Demand intake, Sourcing and Procurement governance, approval architecture, executive notifications, and SOX audit workflow automation.'],
+  ['Jan 2026 - Present', 'ServiceNow Developer, HYR Global Source Inc', 'Demand intake, SPO governance, approval architecture, executive notifications, financial tracking, and SOX audit workflow automation.'],
   ['Feb 2025 - Jan 2026', 'ServiceNow Developer, RSC Solutions', 'REST integrations, custom UI Builder workspace, Walk-up Experience, Outlook Actionable Messages, instance clones, and Yokohama upgrade support.'],
-  ['Nov 2024 - Feb 2025', 'Senior Software Engineer, Work4Flow', 'Agent AI skills, Kafka-to-ServiceNow inventory mapping, GenAI Virtual Agent topics, knowledge automation, CMDB, Discovery, and Service Mapping.'],
+  ['Nov 2024 - Feb 2025', 'Senior Software Engineer, Work4Flow', 'Agent AI skills, prompt tooling, Kafka-to-ServiceNow inventory mapping, GenAI Virtual Agent topics, knowledge automation, CMDB, Discovery, and Service Mapping.'],
   ['Jul 2023 - Sep 2024', 'ServiceNow Developer, NYC Department of Sanitation', 'ITSM automation, ITAM Service Catalog, Service Portal, UI Macros, UI Pages, MID Server exports, CMDB record integrity, and Performance Analytics.'],
   ['Jun 2020 - Jul 2022', 'Software Developer, Futuretech Bizsoft LLP', 'Service Catalogs, Knowledge workflows, 30+ REST integrations, ITSM modules, CSM portals, Agile delivery, scheduled jobs, and approval notifications.'],
 ];
@@ -60,26 +73,34 @@ const timeline = [
 const certifications = [
   'Certified System Administrator',
   'Now Assist Executive',
+  'Now Assist for Creator Bootcamp',
   'Virtual Agent',
   'Performance Analytics',
   'Flow Designer',
   'Integration Hub',
   'Agile Development Fundamentals',
-  'Now Assist for Creator Implementation Bootcamp',
 ];
 
 const stack = [
-  'ServiceNow ITSM',
+  'ITSM',
+  'ITAM',
+  'ITOM',
+  'HRSD',
   'CSM',
-  'CMDB',
+  'SPO',
+  'Employee Center',
   'UI Builder',
+  'Flow Designer',
+  'Integration Hub',
+  'CMDB',
   'Service Portal',
+  'Now Assist',
+  'Virtual Agent',
   'JavaScript',
-  'TypeScript',
-  'React',
-  'Node.js',
+  'REST APIs',
   'MSSQL',
   'OpenAI',
+  'Google Gemini',
   'AWS Bedrock',
 ];
 
@@ -90,47 +111,60 @@ const App = () => {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Shubham Mishra home">
-          <span className="brand-mark">SM</span>
-          <span>
+          <span className="brand-mark" aria-hidden="true">
+            <span>S</span>
+            <span>M</span>
+          </span>
+          <span className="brand-copy">
             <strong>Shubham Mishra</strong>
             <small>ServiceNow Developer</small>
           </span>
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#expertise">Expertise</a>
+          <a href="#ai">AI</a>
           <a href="#work">Work</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="icon-button" href="/assets/Shubham-Mishra-Resume.pdf" aria-label="Download resume" title="Download resume">
-          <FiDownload />
+        <a className="icon-button" href="mailto:shubham.mishra0796@gmail.com" aria-label="Email Shubham" title="Email Shubham">
+          <FiMail />
         </a>
       </header>
 
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-media" aria-hidden="true">
-            <img src="/assets/servicenow-workflow-hero.png" alt="" />
-          </div>
-          <div className="hero-overlay" />
-          <div className="hero-content">
-            <p className="eyebrow">ServiceNow Developer | ITSM, automation, integrations, AI workflows</p>
-            <h1 id="hero-title">Building reliable ServiceNow workflows for enterprise teams.</h1>
-            <p className="hero-copy">
-              I design and deliver ServiceNow solutions across ITSM, CSM, CMDB, Service Portal,
-              UI Builder, Flow Designer, Integration Hub, Performance Analytics, and Now Assist.
-              My work turns manual intake, approvals, audits, notifications, and support processes
-              into measurable platform outcomes.
-            </p>
-            <div className="hero-actions">
-              <a className="primary-action" href="#work">
-                <FiBriefcase />
-                View selected work
-              </a>
-              <a className="secondary-action" href="mailto:shubham.mishra0796@gmail.com">
-                <FiMail />
-                Email me
-              </a>
+          <div className="hero-shell">
+            <div className="hero-content">
+              <p className="eyebrow">ServiceNow Developer | ITSM, ITAM, ITOM, HRSD, CSM, SPO, AI</p>
+              <h1 id="hero-title">Enterprise ServiceNow workflows, built for scale and clarity.</h1>
+              <p className="hero-copy">
+                I design and deliver ServiceNow solutions across platform automation, Employee Center,
+                workspaces, integrations, source-to-pay workflows, analytics, and Now Assist-enabled
+                service experiences. My focus is turning complex operational processes into reliable,
+                measurable workflows.
+              </p>
+              <div className="hero-actions">
+                <a className="primary-action" href="#work">
+                  <FiBriefcase />
+                  View work
+                </a>
+                <a className="secondary-action" href="mailto:shubham.mishra0796@gmail.com">
+                  <FiMail />
+                  Contact me
+                </a>
+              </div>
+            </div>
+            <div className="hero-visual" aria-hidden="true">
+              <img src="/assets/servicenow-ai-hero-v2.png" alt="" />
+              <div className="floating-panel panel-top">
+                <FiZap />
+                <span>Now Assist</span>
+              </div>
+              <div className="floating-panel panel-bottom">
+                <FiCheckCircle />
+                <span>Workflow ready</span>
+              </div>
             </div>
           </div>
         </section>
@@ -147,16 +181,42 @@ const App = () => {
         <section id="expertise" className="section">
           <div className="section-heading">
             <p className="eyebrow">Platform Capability</p>
-            <h2>ServiceNow delivery from process design to production support.</h2>
+            <h2>AI and broader ServiceNow coverage across operations, procurement, and experience.</h2>
           </div>
           <div className="expertise-grid">
             {expertise.map(([title, body, Icon]) => (
-              <article className="expertise-item" key={title}>
+              <article className="glass-card expertise-item" key={title}>
                 <Icon />
                 <h3>{title}</h3>
                 <p>{body}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="ai" className="section ai-section">
+          <div className="section-heading compact-heading">
+            <p className="eyebrow">AI + Now Assist</p>
+            <h2>Practical AI inside ServiceNow, not just AI on a slide.</h2>
+          </div>
+          <div className="ai-layout">
+            <div className="ai-copy glass-panel">
+              <FiZap />
+              <h3>AI-enabled service experiences</h3>
+              <p>
+                I have worked with Now Assist for Creator, ITSM, CSM, and HRSD, and built Virtual Agent
+                experiences that connect custom topics, NLU/NLM configuration, and external GenAI APIs
+                into guided support workflows.
+              </p>
+            </div>
+            <div className="ai-list">
+              {aiHighlights.map((item) => (
+                <article className="glass-card" key={item}>
+                  <FiCheckCircle />
+                  <p>{item}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -167,7 +227,7 @@ const App = () => {
           </div>
           <div className="case-grid">
             {caseStudies.map((item) => (
-              <article className="case-card" key={item.company}>
+              <article className="glass-card case-card" key={item.company}>
                 <span>{item.company}</span>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
@@ -203,7 +263,7 @@ const App = () => {
             <h2 id="credentials-title">Certified, current, and hands-on.</h2>
           </div>
           <div className="credentials-layout">
-            <div className="credential-panel">
+            <div className="glass-panel credential-panel">
               <h3>Certifications</h3>
               <div className="tag-list">
                 {certifications.map((item) => (
@@ -211,7 +271,7 @@ const App = () => {
                 ))}
               </div>
             </div>
-            <div className="credential-panel">
+            <div className="glass-panel credential-panel">
               <h3>Technical Stack</h3>
               <div className="tag-list">
                 {stack.map((item) => (
@@ -225,7 +285,7 @@ const App = () => {
         <section id="contact" className="contact-section">
           <div>
             <p className="eyebrow">Available for ServiceNow delivery</p>
-            <h2>Let&apos;s talk about platform workflows, integrations, and enterprise automation.</h2>
+            <h2>Let&apos;s talk about workflows, integrations, AI, and enterprise automation.</h2>
             <p>
               Based in the New York City area, I bring ServiceNow development experience across public sector,
               consulting, AI-enabled workflow products, and enterprise operations.
@@ -239,10 +299,6 @@ const App = () => {
             <a className="secondary-action" href="tel:+15513446156">
               <FiPhone />
               551 344 6156
-            </a>
-            <a className="secondary-action" href="/assets/Shubham-Mishra-Resume.pdf">
-              <FiFileText />
-              Download resume
             </a>
           </div>
         </section>
