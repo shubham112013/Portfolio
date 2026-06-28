@@ -73,6 +73,7 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
+  grid-column: 1;
   justify-self: start;
   gap: 12px;
   min-width: 235px;
@@ -134,6 +135,7 @@ img {
 
 .nav-links {
   display: flex;
+  grid-column: 2;
   justify-self: center;
   gap: clamp(4px, 0.9vw, 10px);
   color: var(--muted);
@@ -181,6 +183,7 @@ img {
 }
 
 .site-header .icon-button {
+  grid-column: 3;
   justify-self: end;
 }
 
