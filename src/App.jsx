@@ -251,7 +251,7 @@ const App = () => {
         <section id="ai" className="section ai-section">
           <div className="section-heading compact-heading">
             <p className="eyebrow">AI + Now Assist</p>
-            <h2>Practical AI inside ServiceNow, not just AI on a slide.</h2>
+            <h2>Practical AI in ServiceNow - where decks end and automation begins.</h2>
           </div>
           <div className="ai-layout">
             <div className="ai-copy glass-panel">
@@ -340,7 +340,7 @@ const App = () => {
           <div>
             <p className="eyebrow">Available for ServiceNow delivery</p>
             <h2>Let&apos;s talk about workflows, integrations, AI, and enterprise automation.</h2>
-            <p>
+            <p className="contact-intro">
               Based in the New York City area, I bring ServiceNow development experience across public sector,
               consulting, AI-enabled workflow products, and enterprise operations.
             </p>
